@@ -4,10 +4,10 @@
 curl -sfL https://get.k3s.io | sh - 
 
 # This part install k9s, which is a terminal UI to interact with Kubernetes clusters written in Go.
-wget https://github.com/derailed/k9s/releases/download/v0.32.7/k9s_linux_amd64.deb && apt install ./k9s_linux_amd64.deb && rm k9s_linux_amd64.deb
+wget https://github.com/derailed/k9s/releases/download/v0.32.7/k9s_linux_amd64.deb && sudo apt install ./k9s_linux_amd64.deb && sudo rm k9s_linux_amd64.deb
 
 # Copy k3s kubeconfig to default path
-cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 
 # Alias k9s to automatically open with k3s kubeconfig
 echo "alias k9s='k9s --kubeconfig ~/.kube/config'" >> ~/.config/fish/config.fish
