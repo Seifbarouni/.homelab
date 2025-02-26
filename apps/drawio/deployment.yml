@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: homelab-drawio
+  name: drawio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drawio
+  template:
+    metadata:
+      labels:
+        app: drawio
+    spec:
+      containers:
+        - name: drawio
+          image: jgraph/drawio:26.0.9
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "800m"
+          ports:
+            - containerPort: 8080
