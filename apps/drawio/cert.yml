@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: drawio-cert
+  namespace: homelab-drawio
+spec:
+  secretName: drawio-tls-secret
+  issuerRef:
+    name: ss-ca-issuer
+    kind: ClusterIssuer
+  dnsNames:
+    - homelab.drawio.sb
