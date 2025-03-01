@@ -21,20 +21,20 @@ data:
             - abbr: GH
               href: https://github.com/Seifbarouni
   services.yaml: |
-    - My First Group:
-        - My First Service:
-            href: http://localhost/
-            description: Homepage is awesome
+    - Automation:
+        - ArgoCD:
+            href: http://argocd.homelab.sb/
+            description: My argocd instance that controls all the cluster
 
-    - My Second Group:
-        - My Second Service:
-            href: http://localhost/
-            description: Homepage is the best
+    - Other:
+        - Draw.io:
+            href: http://drawio.homelab.sb/
+            description: My drawio instance
 
-    - My Third Group:
-        - My Third Service:
-            href: http://localhost/
-            description: Homepage is 😎
+              #    - My Second Group:
+              #        - My Second Service:
+              #            href: http://localhost/
+              #            description: Homepage is the best
   widgets.yaml: |
     - kubernetes:
         cluster:
