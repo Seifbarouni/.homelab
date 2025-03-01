@@ -25,7 +25,10 @@ data:
         - ArgoCD:
             href: http://argocd.homelab.sb/
             description: My argocd instance that controls all the cluster
-
+    - Monitoring:
+        - Kuma:
+            href: http://kuma.homelab.sb/
+            description: My kuma instance that can monitory different types of resources
     - Other:
         - Draw.io:
             href: http://drawio.homelab.sb/
