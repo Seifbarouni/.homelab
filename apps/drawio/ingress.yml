@@ -4,12 +4,11 @@ metadata:
   namespace: homelab-drawio
   name: drawio-ingress
   annotations:
-    #cert-manager.io/issuer: ss-ca-issuer
-    kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/router.entrypoints: web, websecure
   labels:
     name: drawio-ingress
 spec:
+  ingressClassName: traefik
   rules:
     - host: drawio.homelab.sb
       http:
