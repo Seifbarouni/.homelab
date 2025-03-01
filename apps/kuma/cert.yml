@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kum-cert
+  namespace: kuma
+spec:
+  secretName: kuma-tls-secret
+  issuerRef:
+    name: ss-ca-issuer
+    kind: ClusterIssuer
+  dnsNames:
+    - kuma.homelab.sb
