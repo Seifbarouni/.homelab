@@ -9,4 +9,4 @@ spec:
     name: ss-ca-issuer
     kind: ClusterIssuer
   dnsNames:
-    - homelab.drawio.sb
+    - drawio.homelab.sb

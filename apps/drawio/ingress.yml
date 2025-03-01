@@ -11,7 +11,7 @@ metadata:
     name: drawio-ingress
 spec:
   rules:
-    - host: homelab.drawio.sb
+    - host: drawio.homelab.sb
       http:
         paths:
           - pathType: Prefix
@@ -23,5 +23,5 @@ spec:
                   number: 5001
   tls:
     - hosts:
-        - homelab.drawio.sb
+        - drawio.homelab.sb
       secretName: drawio-tls-secret
