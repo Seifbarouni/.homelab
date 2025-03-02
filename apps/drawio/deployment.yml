@@ -4,7 +4,7 @@ metadata:
   namespace: homelab-drawio
   name: drawio
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: drawio
@@ -16,8 +16,26 @@ spec:
       containers:
         - name: drawio
           image: jgraph/drawio:26.0.9
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 35
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 3
+          securityContext:
+            #readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
           resources:
             limits:
+              memory: "256Mi"
+              cpu: "800m"
+            requests:
               memory: "256Mi"
               cpu: "800m"
           ports:

@@ -11,7 +11,7 @@ error_exit() {
     exit 1
 }
 
-output=$(kubectl apply -f cert-manager.yml 2>&1)
+output=$(kubectl apply -f install.yaml 2>&1)
 
 
 if [ $? -ne 0 ]; then

@@ -15,7 +15,7 @@ log "Creating ArgoCD namespace..."
 kubectl create namespace argocd
 
 log "Deploying ArgoCD..."
-kubectl apply -n argocd -f install.yml || error_exit "Failed to deploy ArgoCD"
+kubectl apply -n argocd -f install.yaml || error_exit "Failed to deploy ArgoCD"
 
 log "Applying certificates..."
 kubectl apply -n argocd -f cert.yml || error_exit "Failed to apply certificates"
