@@ -20,4 +20,6 @@ jobs:
 
           chmod +x datree
 
+          ./datree config set offline local
+
           ./datree test **/*.yml --only-k8s-files --ignore-missing-schemas --policy-config="datree-policies.yaml"
